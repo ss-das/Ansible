@@ -1,0 +1,172 @@
+2023-02-20 13:17:37,115 p=1556 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-02-20 13:17:52,126 p=1593 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-02-20 13:17:52,138 p=1593 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-02-20 13:17:53,141 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:53,152 p=1593 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-02-20 13:17:54,086 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,095 p=1593 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-02-20 13:17:54,799 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,808 p=1593 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-02-20 13:17:55,366 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,373 p=1593 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-02-20 13:17:55,840 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,849 p=1593 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: The value ******** (type int) in a string field was converted to u'********' (type string). If this does not look like what you expect,
+quote the entire value to ensure it does not change.
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | db01                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 06:50:02,263 p=1546 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 06:50:02,329 p=1546 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 06:50:03,837 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:03,848 p=1546 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 06:50:04,860 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:04,870 p=1546 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 06:50:05,552 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:05,561 p=1546 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 06:50:06,108 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:06,117 p=1546 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 06:50:06,581 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:06,590 p=1546 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | [WARNING]: The value ******** (type int) in a string field was converted to u'********' (type string). If this does not look like what you expect,
+quote the entire value to ensure it does not change.
+
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:07,071 p=1546 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 06:50:07,072 p=1546 u=root n=ansible | db01                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:01:05,626 p=1671 u=root n=ansible | ERROR! conflicting action statements: state, yum
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 19, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+                    enabled: yes
+          - name: Install PyMYSQL requirement on remote server
+            ^ here
+
+2023-03-08 07:02:25,636 p=1683 u=root n=ansible | ERROR! conflicting action statements: state, yum
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 19, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+                    enabled: yes
+          - name: Install PyMYSQL requirement on remote server
+            ^ here
+
+2023-03-08 07:06:26,062 p=1711 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 07:07:43,997 p=1746 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:07:44,009 p=1746 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:07:45,280 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:45,288 p=1746 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:07:46,005 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:46,014 p=1746 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:07:46,691 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:46,701 p=1746 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:07:47,255 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:47,263 p=1746 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:07:47,691 p=1746 u=root n=ansible | changed: [db01]
+2023-03-08 07:07:47,700 p=1746 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:07:47,726 p=1746 u=root n=ansible | fatal: [db01]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'devops' is undefined\n\nThe error appears to be in '/root/ansible/ex6/db.yaml': line 27, column 9, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n            state: present\n      - name: Create a user admin with all privilege\n        ^ here\n"}
+2023-03-08 07:07:47,728 p=1746 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:07:47,728 p=1746 u=root n=ansible | db01                       : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:08:47,610 p=1809 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:08:47,621 p=1809 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:08:48,917 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:48,928 p=1809 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:08:49,640 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:49,649 p=1809 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:08:50,323 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:50,333 p=1809 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:08:50,875 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:50,883 p=1809 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:08:51,314 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:51,323 p=1809 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:08:51,766 p=1809 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 07:08:51,766 p=1809 u=root n=ansible | changed: [db01]
+2023-03-08 07:08:51,770 p=1809 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:08:51,770 p=1809 u=root n=ansible | db01                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:11:12,252 p=1889 u=root n=ansible | ERROR! conflicting action statements: debug, var
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 10, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+      - debug:
+        ^ here
+
+2023-03-08 07:12:27,779 p=1898 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:12:27,790 p=1898 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:12:29,069 p=1898 u=root n=ansible | ok: [db01]
+2023-03-08 07:12:29,078 p=1898 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:12:29,104 p=1898 u=root n=ansible | fatal: [db01]: FAILED! => {"msg": "'msg' and 'var' are incompatible options"}
+2023-03-08 07:12:29,107 p=1898 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:12:29,107 p=1898 u=root n=ansible | db01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:13:28,877 p=1926 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:13:28,889 p=1926 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:13:30,517 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:30,527 p=1926 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:13:30,554 p=1926 u=root n=ansible | ok: [db01] => {
+    "dbname": "cloud"
+}
+2023-03-08 07:13:30,562 p=1926 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:13:30,589 p=1926 u=root n=ansible | ok: [db01] => {
+    "msg": "The db user name is aws"
+}
+2023-03-08 07:13:30,597 p=1926 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:13:31,310 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:31,319 p=1926 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:13:31,982 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:31,992 p=1926 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:13:32,534 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:32,543 p=1926 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:13:32,974 p=1926 u=root n=ansible | changed: [db01]
+2023-03-08 07:13:32,983 p=1926 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:13:33,466 p=1926 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 07:13:33,466 p=1926 u=root n=ansible | changed: [db01]
+2023-03-08 07:13:33,470 p=1926 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:13:33,470 p=1926 u=root n=ansible | db01                       : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:14:40,504 p=1397 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 09:14:40,506 p=1397 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 09:14:40,509 p=1397 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}

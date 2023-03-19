@@ -1,0 +1,14 @@
+---
+- name: To print fact variables
+  hosts: all
+  become: yes
+  tasks:
+          - name: Print the OS name
+            debug:
+                    var: ansible_distribution
+          - name: Print the RAM details
+            debug:
+                    var: ansible_memory_mb.real.free
+          - name: Print the name of the processor
+            debug:
+                    var: ansible-processor[2]

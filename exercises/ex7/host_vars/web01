@@ -1,0 +1,4 @@
+# This is the host_vars/web01 file, web01 host will have access to the variable here.
+
+USRNM: web01
+COMM: This variable is from host_vars/web01 file                                                               

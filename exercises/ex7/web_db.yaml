@@ -1,0 +1,32 @@
+---
+- name: Play1 Install and Enable httpd
+  hosts: web
+  become: yes
+  tasks:
+          - name: Install httpd
+            yum:
+                    name: httpd
+                    state: present
+          - name: Start and enable httpd
+            service:
+                    name: httpd
+                    state: started
+                    enabled: yes
+          - name: Setup Webpage
+            copy:
+                    src: index.html
+                    dest: /var/www/html/index.html                     
+
+- name: Play2 Install and enable mariadb
+  hosts: db
+  become: yes
+  tasks:
+          - name: Install mariadb
+            yum:
+                    name: mariadb-server
+                    state: present
+          - name: Start and enable mariadb
+            service:
+                    name: mariadb
+                    state: started
+                    enabled: yes

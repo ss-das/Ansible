@@ -1,0 +1,559 @@
+2023-02-20 13:17:37,115 p=1556 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-02-20 13:17:52,126 p=1593 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-02-20 13:17:52,138 p=1593 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-02-20 13:17:53,141 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:53,152 p=1593 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-02-20 13:17:54,086 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,095 p=1593 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-02-20 13:17:54,799 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,808 p=1593 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-02-20 13:17:55,366 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,373 p=1593 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-02-20 13:17:55,840 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,849 p=1593 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: The value ******** (type int) in a string field was converted to u'********' (type string). If this does not look like what you expect,
+quote the entire value to ensure it does not change.
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | db01                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 06:50:02,263 p=1546 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 06:50:02,329 p=1546 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 06:50:03,837 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:03,848 p=1546 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 06:50:04,860 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:04,870 p=1546 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 06:50:05,552 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:05,561 p=1546 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 06:50:06,108 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:06,117 p=1546 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 06:50:06,581 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:06,590 p=1546 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | [WARNING]: The value ******** (type int) in a string field was converted to u'********' (type string). If this does not look like what you expect,
+quote the entire value to ensure it does not change.
+
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 06:50:07,067 p=1546 u=root n=ansible | ok: [db01]
+2023-03-08 06:50:07,071 p=1546 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 06:50:07,072 p=1546 u=root n=ansible | db01                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:01:05,626 p=1671 u=root n=ansible | ERROR! conflicting action statements: state, yum
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 19, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+                    enabled: yes
+          - name: Install PyMYSQL requirement on remote server
+            ^ here
+
+2023-03-08 07:02:25,636 p=1683 u=root n=ansible | ERROR! conflicting action statements: state, yum
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 19, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+                    enabled: yes
+          - name: Install PyMYSQL requirement on remote server
+            ^ here
+
+2023-03-08 07:06:26,062 p=1711 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 07:07:43,997 p=1746 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:07:44,009 p=1746 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:07:45,280 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:45,288 p=1746 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:07:46,005 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:46,014 p=1746 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:07:46,691 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:46,701 p=1746 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:07:47,255 p=1746 u=root n=ansible | ok: [db01]
+2023-03-08 07:07:47,263 p=1746 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:07:47,691 p=1746 u=root n=ansible | changed: [db01]
+2023-03-08 07:07:47,700 p=1746 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:07:47,726 p=1746 u=root n=ansible | fatal: [db01]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'devops' is undefined\n\nThe error appears to be in '/root/ansible/ex6/db.yaml': line 27, column 9, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n            state: present\n      - name: Create a user admin with all privilege\n        ^ here\n"}
+2023-03-08 07:07:47,728 p=1746 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:07:47,728 p=1746 u=root n=ansible | db01                       : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:08:47,610 p=1809 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:08:47,621 p=1809 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:08:48,917 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:48,928 p=1809 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:08:49,640 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:49,649 p=1809 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:08:50,323 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:50,333 p=1809 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:08:50,875 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:50,883 p=1809 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:08:51,314 p=1809 u=root n=ansible | ok: [db01]
+2023-03-08 07:08:51,323 p=1809 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:08:51,766 p=1809 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 07:08:51,766 p=1809 u=root n=ansible | changed: [db01]
+2023-03-08 07:08:51,770 p=1809 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:08:51,770 p=1809 u=root n=ansible | db01                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:11:12,252 p=1889 u=root n=ansible | ERROR! conflicting action statements: debug, var
+
+The error appears to be in '/root/ansible/ex6/db.yaml': line 10, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+      - debug:
+        ^ here
+
+2023-03-08 07:12:27,779 p=1898 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:12:27,790 p=1898 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:12:29,069 p=1898 u=root n=ansible | ok: [db01]
+2023-03-08 07:12:29,078 p=1898 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:12:29,104 p=1898 u=root n=ansible | fatal: [db01]: FAILED! => {"msg": "'msg' and 'var' are incompatible options"}
+2023-03-08 07:12:29,107 p=1898 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:12:29,107 p=1898 u=root n=ansible | db01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 07:13:28,877 p=1926 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 07:13:28,889 p=1926 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 07:13:30,517 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:30,527 p=1926 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:13:30,554 p=1926 u=root n=ansible | ok: [db01] => {
+    "dbname": "cloud"
+}
+2023-03-08 07:13:30,562 p=1926 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 07:13:30,589 p=1926 u=root n=ansible | ok: [db01] => {
+    "msg": "The db user name is aws"
+}
+2023-03-08 07:13:30,597 p=1926 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 07:13:31,310 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:31,319 p=1926 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 07:13:31,982 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:31,992 p=1926 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 07:13:32,534 p=1926 u=root n=ansible | ok: [db01]
+2023-03-08 07:13:32,543 p=1926 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 07:13:32,974 p=1926 u=root n=ansible | changed: [db01]
+2023-03-08 07:13:32,983 p=1926 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 07:13:33,466 p=1926 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 07:13:33,466 p=1926 u=root n=ansible | changed: [db01]
+2023-03-08 07:13:33,470 p=1926 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 07:13:33,470 p=1926 u=root n=ansible | db01                       : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:14:40,504 p=1397 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 09:14:40,506 p=1397 u=root n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 09:14:40,509 p=1397 u=root n=ansible | web02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-03-08 09:21:21,005 p=1512 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/root/ansible/ex7/var_precedence.yaml': line 14, column 18, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+                          register: USROUT
+                 - debug:
+                 ^ here
+
+2023-03-08 09:22:07,181 p=1520 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:22:07,193 p=1520 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:22:08,762 p=1520 u=root n=ansible | ok: [db01]
+2023-03-08 09:22:08,774 p=1520 u=root n=ansible | ok: [web01]
+2023-03-08 09:22:08,785 p=1520 u=root n=ansible | ok: [web02]
+2023-03-08 09:22:08,790 p=1520 u=root n=ansible | ERROR! the field 'hosts' is required but was not set
+2023-03-08 09:22:33,064 p=1571 u=root n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/root/ansible/ex7/var_precedence.yaml': line 2, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+        - name: This playbook is to check the precedence of variables
+          ^ here
+
+2023-03-08 09:23:07,180 p=1579 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:23:07,192 p=1579 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:23:08,303 p=1579 u=root n=ansible | ok: [db01]
+2023-03-08 09:23:08,316 p=1579 u=root n=ansible | ok: [web01]
+2023-03-08 09:23:08,318 p=1579 u=root n=ansible | ok: [web02]
+2023-03-08 09:23:08,321 p=1579 u=root n=ansible | ERROR! the field 'hosts' is required but was not set
+2023-03-08 09:23:35,541 p=1622 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:23:35,553 p=1622 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:23:36,640 p=1622 u=root n=ansible | ok: [web02]
+2023-03-08 09:23:36,650 p=1622 u=root n=ansible | ok: [db01]
+2023-03-08 09:23:36,654 p=1622 u=root n=ansible | ok: [web01]
+2023-03-08 09:23:36,656 p=1622 u=root n=ansible | ERROR! the field 'hosts' is required but was not set
+2023-03-08 09:25:11,524 p=1668 u=root n=ansible | ERROR! the field 'hosts' is required but was not set
+2023-03-08 09:27:23,525 p=1677 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:27:23,536 p=1677 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:27:25,024 p=1677 u=root n=ansible | ok: [web02]
+2023-03-08 09:27:25,036 p=1677 u=root n=ansible | ok: [db01]
+2023-03-08 09:27:25,039 p=1677 u=root n=ansible | ok: [web01]
+2023-03-08 09:27:25,046 p=1677 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:27:25,758 p=1677 u=root n=ansible | fatal: [web01]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (user) module: register Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, update_password"}
+2023-03-08 09:27:25,761 p=1677 u=root n=ansible | fatal: [db01]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (user) module: register Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, update_password"}
+2023-03-08 09:27:25,768 p=1677 u=root n=ansible | fatal: [web02]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (user) module: register Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, update_password"}
+2023-03-08 09:27:25,770 p=1677 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:27:25,770 p=1677 u=root n=ansible | db01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:27:25,770 p=1677 u=root n=ansible | web01                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:27:25,771 p=1677 u=root n=ansible | web02                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:28:42,453 p=1756 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:28:42,464 p=1756 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:28:43,968 p=1756 u=root n=ansible | ok: [db01]
+2023-03-08 09:28:43,980 p=1756 u=root n=ansible | ok: [web02]
+2023-03-08 09:28:43,982 p=1756 u=root n=ansible | ok: [web01]
+2023-03-08 09:28:43,989 p=1756 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:28:44,725 p=1756 u=root n=ansible | changed: [db01]
+2023-03-08 09:28:44,745 p=1756 u=root n=ansible | changed: [web01]
+2023-03-08 09:28:44,753 p=1756 u=root n=ansible | changed: [web02]
+2023-03-08 09:28:44,762 p=1756 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:28:44,830 p=1756 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:28:44,849 p=1756 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:28:44,863 p=1756 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:28:44,871 p=1756 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:28:44,934 p=1756 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:28:44,955 p=1756 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:28:44,967 p=1756 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:28:44,970 p=1756 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:28:44,970 p=1756 u=root n=ansible | db01                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:28:44,970 p=1756 u=root n=ansible | web01                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:28:44,970 p=1756 u=root n=ansible | web02                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:14,388 p=1877 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:31:14,400 p=1877 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:31:15,882 p=1877 u=root n=ansible | ok: [db01]
+2023-03-08 09:31:15,894 p=1877 u=root n=ansible | ok: [web02]
+2023-03-08 09:31:15,896 p=1877 u=root n=ansible | ok: [web01]
+2023-03-08 09:31:15,903 p=1877 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:31:16,627 p=1877 u=root n=ansible | ok: [web01]
+2023-03-08 09:31:16,629 p=1877 u=root n=ansible | ok: [db01]
+2023-03-08 09:31:16,634 p=1877 u=root n=ansible | ok: [web02]
+2023-03-08 09:31:16,644 p=1877 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:31:16,706 p=1877 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:31:16,732 p=1877 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:31:16,741 p=1877 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "playbookuser"
+}
+2023-03-08 09:31:16,749 p=1877 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:31:16,815 p=1877 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:31:16,838 p=1877 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:31:16,849 p=1877 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This is from playbook"
+}
+2023-03-08 09:31:16,851 p=1877 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:31:16,851 p=1877 u=root n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:16,851 p=1877 u=root n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:16,852 p=1877 u=root n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:54,195 p=1968 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:31:54,207 p=1968 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:31:55,306 p=1968 u=root n=ansible | ok: [web02]
+2023-03-08 09:31:55,317 p=1968 u=root n=ansible | ok: [db01]
+2023-03-08 09:31:55,319 p=1968 u=root n=ansible | ok: [web01]
+2023-03-08 09:31:55,326 p=1968 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:31:56,037 p=1968 u=root n=ansible | changed: [web01]
+2023-03-08 09:31:56,041 p=1968 u=root n=ansible | changed: [db01]
+2023-03-08 09:31:56,072 p=1968 u=root n=ansible | changed: [web02]
+2023-03-08 09:31:56,081 p=1968 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:31:56,147 p=1968 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:31:56,165 p=1968 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:31:56,176 p=1968 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:31:56,184 p=1968 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:31:56,246 p=1968 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:31:56,269 p=1968 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:31:56,279 p=1968 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:31:56,282 p=1968 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:31:56,282 p=1968 u=root n=ansible | db01                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:56,282 p=1968 u=root n=ansible | web01                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:31:56,282 p=1968 u=root n=ansible | web02                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:32:03,839 p=2049 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:32:03,851 p=2049 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:32:04,964 p=2049 u=root n=ansible | ok: [db01]
+2023-03-08 09:32:04,975 p=2049 u=root n=ansible | ok: [web02]
+2023-03-08 09:32:04,978 p=2049 u=root n=ansible | ok: [web01]
+2023-03-08 09:32:04,985 p=2049 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:32:05,693 p=2049 u=root n=ansible | ok: [db01]
+2023-03-08 09:32:05,700 p=2049 u=root n=ansible | ok: [web02]
+2023-03-08 09:32:05,704 p=2049 u=root n=ansible | ok: [web01]
+2023-03-08 09:32:05,732 p=2049 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:32:05,801 p=2049 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:32:05,820 p=2049 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:32:05,833 p=2049 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:32:05,842 p=2049 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:32:05,910 p=2049 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:32:05,926 p=2049 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:32:05,938 p=2049 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This is from group_vars/all file"
+}
+2023-03-08 09:32:05,941 p=2049 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:32:05,941 p=2049 u=root n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:32:05,942 p=2049 u=root n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:32:05,942 p=2049 u=root n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:34:17,081 p=2135 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:34:17,093 p=2135 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:34:18,596 p=2135 u=root n=ansible | ok: [web02]
+2023-03-08 09:34:18,610 p=2135 u=root n=ansible | ok: [db01]
+2023-03-08 09:34:18,612 p=2135 u=root n=ansible | ok: [web01]
+2023-03-08 09:34:18,619 p=2135 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:34:19,337 p=2135 u=root n=ansible | changed: [db01]
+2023-03-08 09:34:19,369 p=2135 u=root n=ansible | changed: [web01]
+2023-03-08 09:34:19,373 p=2135 u=root n=ansible | changed: [web02]
+2023-03-08 09:34:19,382 p=2135 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:34:19,448 p=2135 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "webgroupusr"
+}
+2023-03-08 09:34:19,467 p=2135 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "webgroupusr"
+}
+2023-03-08 09:34:19,478 p=2135 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:34:19,486 p=2135 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:34:19,550 p=2135 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This variable is from group_vars/web file"
+}
+2023-03-08 09:34:19,572 p=2135 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This variable is from group_vars/web file"
+}
+2023-03-08 09:34:19,582 p=2135 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This variable is from group_vars/all file"
+}
+2023-03-08 09:34:19,585 p=2135 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:34:19,585 p=2135 u=root n=ansible | db01                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:34:19,585 p=2135 u=root n=ansible | web01                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:34:19,586 p=2135 u=root n=ansible | web02                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:37:46,762 p=2235 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:37:46,773 p=2235 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/root/ansible/ex7/host_vars/web01': line 6, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+~
+~
+^ here
+
+2023-03-08 09:38:26,845 p=2245 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:38:26,856 p=2245 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/root/ansible/ex7/host_vars/web01': line 6, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+~
+~
+^ here
+
+2023-03-08 09:39:33,622 p=2254 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:39:33,633 p=2254 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  could not find expected ':'
+
+The error appears to be in '/root/ansible/ex7/host_vars/web01': line 6, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+~
+~
+^ here
+
+2023-03-08 09:40:36,335 p=2263 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:40:36,347 p=2263 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:40:37,844 p=2263 u=root n=ansible | ok: [web02]
+2023-03-08 09:40:37,855 p=2263 u=root n=ansible | ok: [db01]
+2023-03-08 09:40:37,857 p=2263 u=root n=ansible | ok: [web01]
+2023-03-08 09:40:37,865 p=2263 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:40:38,567 p=2263 u=root n=ansible | ok: [web02]
+2023-03-08 09:40:38,569 p=2263 u=root n=ansible | ok: [db01]
+2023-03-08 09:40:38,598 p=2263 u=root n=ansible | changed: [web01]
+2023-03-08 09:40:38,608 p=2263 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:40:38,671 p=2263 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "web01"
+}
+2023-03-08 09:40:38,694 p=2263 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "webgroupusr"
+}
+2023-03-08 09:40:38,705 p=2263 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "groupvarsuser"
+}
+2023-03-08 09:40:38,712 p=2263 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:40:38,773 p=2263 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "This variable is from host_vars/web01 file"
+}
+2023-03-08 09:40:38,799 p=2263 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "This variable is from group_vars/web file"
+}
+2023-03-08 09:40:38,807 p=2263 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "This variable is from group_vars/all file"
+}
+2023-03-08 09:40:38,811 p=2263 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:40:38,811 p=2263 u=root n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:40:38,811 p=2263 u=root n=ansible | web01                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:40:38,812 p=2263 u=root n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:41:30,436 p=2354 u=root n=ansible | PLAY [This playbook is to check the precedence of variables] *****************************************************************************************
+2023-03-08 09:41:30,449 p=2354 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:41:31,572 p=2354 u=root n=ansible | ok: [db01]
+2023-03-08 09:41:31,585 p=2354 u=root n=ansible | ok: [web02]
+2023-03-08 09:41:31,587 p=2354 u=root n=ansible | ok: [web01]
+2023-03-08 09:41:31,595 p=2354 u=root n=ansible | TASK [Create an user] ********************************************************************************************************************************
+2023-03-08 09:41:32,371 p=2354 u=root n=ansible | changed: [web02]
+2023-03-08 09:41:32,372 p=2354 u=root n=ansible | changed: [db01]
+2023-03-08 09:41:32,373 p=2354 u=root n=ansible | changed: [web01]
+2023-03-08 09:41:32,380 p=2354 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:41:32,439 p=2354 u=root n=ansible | ok: [web01] => {
+    "USROUT.name": "cliuser"
+}
+2023-03-08 09:41:32,462 p=2354 u=root n=ansible | ok: [web02] => {
+    "USROUT.name": "cliuser"
+}
+2023-03-08 09:41:32,476 p=2354 u=root n=ansible | ok: [db01] => {
+    "USROUT.name": "cliuser"
+}
+2023-03-08 09:41:32,484 p=2354 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:41:32,547 p=2354 u=root n=ansible | ok: [web01] => {
+    "USROUT.comment": "cli"
+}
+2023-03-08 09:41:32,571 p=2354 u=root n=ansible | ok: [web02] => {
+    "USROUT.comment": "cli"
+}
+2023-03-08 09:41:32,580 p=2354 u=root n=ansible | ok: [db01] => {
+    "USROUT.comment": "cli"
+}
+2023-03-08 09:41:32,583 p=2354 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:41:32,583 p=2354 u=root n=ansible | db01                       : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:41:32,583 p=2354 u=root n=ansible | web01                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:41:32,583 p=2354 u=root n=ansible | web02                      : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:44:54,565 p=2445 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 09:44:54,577 p=2445 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:44:55,851 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:55,860 p=2445 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:44:55,886 p=2445 u=root n=ansible | ok: [db01] => {
+    "dbname": "cloud"
+}
+2023-03-08 09:44:55,895 p=2445 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:44:55,920 p=2445 u=root n=ansible | ok: [db01] => {
+    "msg": "The db user name is aws"
+}
+2023-03-08 09:44:55,928 p=2445 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 09:44:56,866 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:56,875 p=2445 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 09:44:57,548 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:57,557 p=2445 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 09:44:58,116 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:58,125 p=2445 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 09:44:58,591 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:58,600 p=2445 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 09:44:59,093 p=2445 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 09:44:59,093 p=2445 u=root n=ansible | ok: [db01]
+2023-03-08 09:44:59,097 p=2445 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:44:59,097 p=2445 u=root n=ansible | db01                       : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-08 09:45:40,723 p=2518 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-03-08 09:45:40,735 p=2518 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 09:45:41,638 p=2518 u=root n=ansible | ok: [db01]
+2023-03-08 09:45:41,646 p=2518 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:45:41,673 p=2518 u=root n=ansible | ok: [db01] => {
+    "dbname": "groupvarsDB"
+}
+2023-03-08 09:45:41,682 p=2518 u=root n=ansible | TASK [debug] *****************************************************************************************************************************************
+2023-03-08 09:45:41,709 p=2518 u=root n=ansible | ok: [db01] => {
+    "msg": "The db user name is aws"
+}
+2023-03-08 09:45:41,717 p=2518 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-03-08 09:45:42,429 p=2518 u=root n=ansible | ok: [db01]
+2023-03-08 09:45:42,439 p=2518 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-03-08 09:45:43,171 p=2518 u=root n=ansible | ok: [db01]
+2023-03-08 09:45:43,180 p=2518 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-03-08 09:45:43,732 p=2518 u=root n=ansible | ok: [db01]
+2023-03-08 09:45:43,741 p=2518 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-03-08 09:45:44,180 p=2518 u=root n=ansible | changed: [db01]
+2023-03-08 09:45:44,189 p=2518 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-03-08 09:45:44,632 p=2518 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-03-08 09:45:44,633 p=2518 u=root n=ansible | ok: [db01]
+2023-03-08 09:45:44,636 p=2518 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 09:45:44,637 p=2518 u=root n=ansible | db01                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

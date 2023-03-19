@@ -1,0 +1,78 @@
+---
+# tasks file for post-install
+    - name: Install Packages on centos
+      yum:
+        name: "{{item}}"
+        state: present
+      when: ansible_distribution == "CentOS"
+      loop: "{{packages}}"
+       
+    - name: Install Packages on Ubuntu
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      when: ansible_distribution == "Ubuntu"
+      loop: "{{packages}}"
+        
+
+    - name: Start and enable NTP service on Centos
+      service:
+        name: ntpd
+        state: started
+        enabled: yes
+      when: ansible_os_family == "RedHat"
+     
+
+    - name: Start and enable NTP service on ubuntu
+      service:
+        name: ntp
+        state: started
+        enabled: yes
+      when: ansible_os_family == "Debian"
+    
+    - name: Add group
+      group:
+        name: devops
+        state: present
+  
+    - name: Add users
+      user:
+        name: "{{item}}"
+        state: present
+        groups: devops
+      loop: "{{username}}"
+
+
+    - name: Banner file /etc/motd
+      copy:
+        content: "This {{ansible_distribution}} is managed by Ansible.\n"
+        dest: /etc/motd
+
+    - name: Deploy NTP conf file for Redhat
+      template:
+        src: ntp_redhat.conf.j2
+        dest: /etc/ntp.conf
+      when: ansible_os_family == "RedHat"
+      notify: 
+        - Restart NTP on Redhat
+
+    
+    - name: Deploy NTP conf file for Debian
+      template:
+        src: ntp_debian.conf.j2
+        dest: /etc/ntp.conf
+      when: ansible_os_family == "Debian"
+      notify:
+        - Restart NTP on Debian
+
+    - name: Directory for dev data
+      file:
+        path: /opt/devdata
+        state: directory
+        mode: 0775
+        
+    - name: Deploy dev data
+      copy:
+              src: dev.txt
+              dest: /opt/devdata/dev.txt

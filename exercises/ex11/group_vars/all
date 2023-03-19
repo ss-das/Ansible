@@ -1,0 +1,19 @@
+packages:
+- ntp
+- wget
+- git
+- zip
+- unzip
+
+username:
+- user1
+- user2
+- user3
+- user4
+- user5
+
+
+ntp0: 0.north-america.pool.ntp.org
+ntp1: 1.north-america.pool.ntp.org
+ntp2: 2.north-america.pool.ntp.org
+ntp3: 3.north-america.pool.ntp.org

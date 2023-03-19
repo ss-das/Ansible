@@ -1,0 +1,4 @@
+# This is the group_vars/web file, hosts in the web group will have access to these variables
+
+USRNM: webgroupusr
+COMM: This variable is from group_vars/web file

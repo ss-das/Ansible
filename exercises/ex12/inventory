@@ -1,0 +1,21 @@
+web01 ansible_host=172.31.2.37 
+web02 ansible_host=172.31.48.221
+web03 ansible_host=172.31.57.155 ansible_user=ubuntu
+db01 ansible_host=172.31.58.216
+
+[web]
+web01
+web02
+web03
+
+[db]
+db01
+
+[us_east_1:children]
+web
+db
+
+[us_east_1:vars]
+ansible_user=centos 
+ansible_ssh_private_key_file=k.pem
+

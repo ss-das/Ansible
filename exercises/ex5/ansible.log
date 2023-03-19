@@ -1,0 +1,27 @@
+2023-02-20 13:17:37,115 p=1556 u=root n=ansible | db01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2023-02-20 13:17:52,126 p=1593 u=root n=ansible | PLAY [Setup mariadb, create a database and an user.] *************************************************************************************************
+2023-02-20 13:17:52,138 p=1593 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-02-20 13:17:53,141 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:53,152 p=1593 u=root n=ansible | TASK [Install mariadb databse] ***********************************************************************************************************************
+2023-02-20 13:17:54,086 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,095 p=1593 u=root n=ansible | TASK [Start and Enable mariadb] **********************************************************************************************************************
+2023-02-20 13:17:54,799 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:54,808 p=1593 u=root n=ansible | TASK [Install PyMysql requirement on remote server] **************************************************************************************************
+2023-02-20 13:17:55,366 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,373 p=1593 u=root n=ansible | TASK [Create a databse named accounts] ***************************************************************************************************************
+2023-02-20 13:17:55,840 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:55,849 p=1593 u=root n=ansible | TASK [Create a user admin with all privilege] ********************************************************************************************************
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: The value ******** (type int) in a string field was converted to u'********' (type string). If this does not look like what you expect,
+quote the entire value to ensure it does not change.
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2023-02-20 13:17:56,295 p=1593 u=root n=ansible | ok: [db01]
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-02-20 13:17:56,299 p=1593 u=root n=ansible | db01                       : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

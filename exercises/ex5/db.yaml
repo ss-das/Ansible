@@ -1,0 +1,30 @@
+---
+- name: Setup mariadb, create a database and an user.
+  hosts: db
+  become: yes
+  tasks:
+      - name: Install mariadb databse
+        yum:
+            name: mariadb
+            state: present
+      - name: Start and Enable mariadb
+        service:
+            name: mariadb
+            state: started
+            enabled: yes
+      - name: Install PyMysql requirement on remote server
+        yum:
+            name: MySQL-python
+            state: present
+      - name: Create a databse named accounts
+        mysql_db:
+            name: accounts
+            state: present
+      - name: Create a user admin with all privilege
+        mysql_user:
+            name: admin
+            password: 123111
+            priv: '*.*:ALL'
+            state: present
+
+

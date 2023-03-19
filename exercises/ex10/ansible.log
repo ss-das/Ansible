@@ -1,0 +1,178 @@
+2023-03-08 12:34:26,264 p=1551 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/root/ansible/ex10/provisioning.yaml': line 13, column 12, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+           - name: Install Packages on Ubuntu
+           ^ here
+
+2023-03-08 12:36:29,040 p=1575 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/root/ansible/ex10/provision.yaml': line 11, column 12, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+      when: ansible_distribution == "CentOS"
+       loop: "{{packages}}"
+           ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2023-03-08 12:37:17,926 p=1584 u=root n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/root/ansible/ex10/provision.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Provisioning server
+  ^ here
+
+2023-03-08 12:38:37,781 p=1592 u=root n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/root/ansible/ex10/provision.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Provisioning server
+  ^ here
+
+2023-03-08 12:39:37,431 p=1600 u=root n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/root/ansible/ex10/provision.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Provisioning server
+  ^ here
+
+2023-03-08 12:40:15,112 p=1608 u=root n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected '-' indicator
+
+The error appears to be in '/root/ansible/ex10/provision.yaml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+ - name: Provisioning server
+  host: all
+  ^ here
+
+2023-03-08 12:40:46,988 p=1615 u=root n=ansible | PLAY [Provisioning server] ***************************************************************************************************************************
+2023-03-08 12:40:47,024 p=1615 u=root n=ansible | TASK [Gathering Facts] *******************************************************************************************************************************
+2023-03-08 12:40:48,741 p=1615 u=root n=ansible | ok: [web02]
+2023-03-08 12:40:48,752 p=1615 u=root n=ansible | ok: [db01]
+2023-03-08 12:40:48,758 p=1615 u=root n=ansible | ok: [web01]
+2023-03-08 12:40:48,947 p=1615 u=root n=ansible | ok: [web03]
+2023-03-08 12:40:48,955 p=1615 u=root n=ansible | TASK [Install Packages on centos] ********************************************************************************************************************
+2023-03-08 12:40:49,114 p=1615 u=root n=ansible | skipping: [web03] => (item=ntp) 
+2023-03-08 12:40:49,122 p=1615 u=root n=ansible | skipping: [web03] => (item=wget) 
+2023-03-08 12:40:49,143 p=1615 u=root n=ansible | skipping: [web03] => (item=git) 
+2023-03-08 12:40:49,154 p=1615 u=root n=ansible | skipping: [web03] => (item=zip) 
+2023-03-08 12:40:49,163 p=1615 u=root n=ansible | skipping: [web03] => (item=unzip) 
+2023-03-08 12:40:56,806 p=1615 u=root n=ansible | changed: [web01] => (item=ntp)
+2023-03-08 12:40:57,217 p=1615 u=root n=ansible | changed: [web02] => (item=ntp)
+2023-03-08 12:40:57,272 p=1615 u=root n=ansible | changed: [db01] => (item=ntp)
+2023-03-08 12:40:58,993 p=1615 u=root n=ansible | changed: [web01] => (item=wget)
+2023-03-08 12:40:59,416 p=1615 u=root n=ansible | changed: [web02] => (item=wget)
+2023-03-08 12:40:59,491 p=1615 u=root n=ansible | changed: [db01] => (item=wget)
+2023-03-08 12:41:03,584 p=1615 u=root n=ansible | changed: [db01] => (item=git)
+2023-03-08 12:41:05,603 p=1615 u=root n=ansible | changed: [db01] => (item=zip)
+2023-03-08 12:41:07,549 p=1615 u=root n=ansible | changed: [web01] => (item=git)
+2023-03-08 12:41:07,740 p=1615 u=root n=ansible | changed: [db01] => (item=unzip)
+2023-03-08 12:41:08,148 p=1615 u=root n=ansible | changed: [web02] => (item=git)
+2023-03-08 12:41:09,548 p=1615 u=root n=ansible | changed: [web01] => (item=zip)
+2023-03-08 12:41:10,094 p=1615 u=root n=ansible | changed: [web02] => (item=zip)
+2023-03-08 12:41:11,688 p=1615 u=root n=ansible | changed: [web01] => (item=unzip)
+2023-03-08 12:41:12,150 p=1615 u=root n=ansible | changed: [web02] => (item=unzip)
+2023-03-08 12:41:12,163 p=1615 u=root n=ansible | TASK [Install Packages on Ubuntu] ********************************************************************************************************************
+2023-03-08 12:41:12,291 p=1615 u=root n=ansible | skipping: [web01] => (item=ntp) 
+2023-03-08 12:41:12,295 p=1615 u=root n=ansible | skipping: [web01] => (item=wget) 
+2023-03-08 12:41:12,299 p=1615 u=root n=ansible | skipping: [web01] => (item=git) 
+2023-03-08 12:41:12,300 p=1615 u=root n=ansible | skipping: [web01] => (item=zip) 
+2023-03-08 12:41:12,300 p=1615 u=root n=ansible | skipping: [web02] => (item=ntp) 
+2023-03-08 12:41:12,300 p=1615 u=root n=ansible | skipping: [web02] => (item=wget) 
+2023-03-08 12:41:12,306 p=1615 u=root n=ansible | skipping: [web01] => (item=unzip) 
+2023-03-08 12:41:12,316 p=1615 u=root n=ansible | skipping: [web02] => (item=git) 
+2023-03-08 12:41:12,326 p=1615 u=root n=ansible | skipping: [web02] => (item=zip) 
+2023-03-08 12:41:12,344 p=1615 u=root n=ansible | skipping: [web02] => (item=unzip) 
+2023-03-08 12:41:12,370 p=1615 u=root n=ansible | skipping: [db01] => (item=ntp) 
+2023-03-08 12:41:12,372 p=1615 u=root n=ansible | skipping: [db01] => (item=wget) 
+2023-03-08 12:41:12,380 p=1615 u=root n=ansible | skipping: [db01] => (item=git) 
+2023-03-08 12:41:12,389 p=1615 u=root n=ansible | skipping: [db01] => (item=zip) 
+2023-03-08 12:41:12,395 p=1615 u=root n=ansible | skipping: [db01] => (item=unzip) 
+2023-03-08 12:41:58,306 p=1615 u=root n=ansible | changed: [web03] => (item=ntp)
+2023-03-08 12:42:01,027 p=1615 u=root n=ansible | ok: [web03] => (item=wget)
+2023-03-08 12:42:03,727 p=1615 u=root n=ansible | ok: [web03] => (item=git)
+2023-03-08 12:42:09,197 p=1615 u=root n=ansible | changed: [web03] => (item=zip)
+2023-03-08 12:42:11,821 p=1615 u=root n=ansible | ok: [web03] => (item=unzip)
+2023-03-08 12:42:11,836 p=1615 u=root n=ansible | TASK [Start and enable NTP service on Centos] ********************************************************************************************************
+2023-03-08 12:42:11,987 p=1615 u=root n=ansible | skipping: [web03]
+2023-03-08 12:42:13,311 p=1615 u=root n=ansible | changed: [web02]
+2023-03-08 12:42:13,333 p=1615 u=root n=ansible | changed: [db01]
+2023-03-08 12:42:13,352 p=1615 u=root n=ansible | changed: [web01]
+2023-03-08 12:42:13,362 p=1615 u=root n=ansible | TASK [Start and enable NTP service on ubuntu] ********************************************************************************************************
+2023-03-08 12:42:13,435 p=1615 u=root n=ansible | skipping: [web01]
+2023-03-08 12:42:13,463 p=1615 u=root n=ansible | skipping: [web02]
+2023-03-08 12:42:13,501 p=1615 u=root n=ansible | skipping: [db01]
+2023-03-08 12:42:13,934 p=1615 u=root n=ansible | ok: [web03]
+2023-03-08 12:42:13,942 p=1615 u=root n=ansible | TASK [Add group] *************************************************************************************************************************************
+2023-03-08 12:42:14,570 p=1615 u=root n=ansible | changed: [web03]
+2023-03-08 12:42:14,608 p=1615 u=root n=ansible | changed: [web02]
+2023-03-08 12:42:14,615 p=1615 u=root n=ansible | changed: [web01]
+2023-03-08 12:42:14,618 p=1615 u=root n=ansible | changed: [db01]
+2023-03-08 12:42:14,626 p=1615 u=root n=ansible | TASK [Add users] *************************************************************************************************************************************
+2023-03-08 12:42:15,495 p=1615 u=root n=ansible | changed: [web03] => (item=user1)
+2023-03-08 12:42:15,514 p=1615 u=root n=ansible | changed: [web02] => (item=user1)
+2023-03-08 12:42:15,518 p=1615 u=root n=ansible | changed: [db01] => (item=user1)
+2023-03-08 12:42:15,526 p=1615 u=root n=ansible | changed: [web01] => (item=user1)
+2023-03-08 12:42:16,004 p=1615 u=root n=ansible | changed: [web03] => (item=user2)
+2023-03-08 12:42:16,081 p=1615 u=root n=ansible | changed: [web02] => (item=user2)
+2023-03-08 12:42:16,084 p=1615 u=root n=ansible | changed: [db01] => (item=user2)
+2023-03-08 12:42:16,092 p=1615 u=root n=ansible | changed: [web01] => (item=user2)
+2023-03-08 12:42:16,480 p=1615 u=root n=ansible | changed: [web03] => (item=user3)
+2023-03-08 12:42:16,625 p=1615 u=root n=ansible | changed: [web02] => (item=user3)
+2023-03-08 12:42:16,632 p=1615 u=root n=ansible | changed: [db01] => (item=user3)
+2023-03-08 12:42:16,639 p=1615 u=root n=ansible | changed: [web01] => (item=user3)
+2023-03-08 12:42:16,864 p=1615 u=root n=ansible | changed: [web03] => (item=user4)
+2023-03-08 12:42:17,154 p=1615 u=root n=ansible | changed: [web02] => (item=user4)
+2023-03-08 12:42:17,167 p=1615 u=root n=ansible | changed: [db01] => (item=user4)
+2023-03-08 12:42:17,169 p=1615 u=root n=ansible | changed: [web01] => (item=user4)
+2023-03-08 12:42:17,282 p=1615 u=root n=ansible | changed: [web03] => (item=user5)
+2023-03-08 12:42:17,692 p=1615 u=root n=ansible | changed: [web02] => (item=user5)
+2023-03-08 12:42:17,716 p=1615 u=root n=ansible | changed: [db01] => (item=user5)
+2023-03-08 12:42:17,718 p=1615 u=root n=ansible | changed: [web01] => (item=user5)
+2023-03-08 12:42:17,722 p=1615 u=root n=ansible | PLAY RECAP *******************************************************************************************************************************************
+2023-03-08 12:42:17,722 p=1615 u=root n=ansible | db01                       : ok=5    changed=4    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-03-08 12:42:17,722 p=1615 u=root n=ansible | web01                      : ok=5    changed=4    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-03-08 12:42:17,723 p=1615 u=root n=ansible | web02                      : ok=5    changed=4    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2023-03-08 12:42:17,723 p=1615 u=root n=ansible | web03                      : ok=5    changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

@@ -1,0 +1,8 @@
+#This is the group_vars/all files, every host from all the group has access to these variables
+
+
+dbname: groupvarsDB
+dbuser: globaluser
+dbpass: admin123
+USRNM: groupvarsuser
+COMM: This variable is from group_vars/all file

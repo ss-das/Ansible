@@ -1,0 +1,17 @@
+---
+        - name: This playbook is to check the precedence of variables
+          hosts: all
+          become: yes
+          # vars:
+          # USRNM: playbookuser
+          #COMM: This is from playbook
+          tasks:
+                - name: Create an user
+                  user:
+                          name: "{{USRNM}}"
+                          comment: "{{COMM}}"
+                  register: USROUT
+                - debug:
+                         var: USROUT.name
+                - debug:
+                         var: USROUT.comment
