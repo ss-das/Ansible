@@ -1,0 +1,32 @@
+---
+- name: Setup keypair and ec2 instance
+  hosts: localhost
+  tasks:
+    - name: create a new ec2 key pair, returns generated private key
+      ec2_key:
+        name: sample
+      register: keyout
+
+      #    - debug:
+      #  var: keyout
+        
+
+    - name: save private key content
+      copy:
+        content: "{{keyout.key.private_key}}"
+        dest: ./sample-key.pem
+      when: keyout.changed
+
+    - name: test ec2 instance
+      ec2:
+        key_name: sample
+        instance_type: t2.micro
+        image: ami-02f3f602d23f1659d
+        wait: yes
+        instance_tags:
+          Name: web01
+          project: ansible
+        exact_count: 1
+        count_tag:
+          Name: web01
+          project: ansible
